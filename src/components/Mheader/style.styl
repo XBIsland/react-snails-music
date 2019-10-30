@@ -1,0 +1,33 @@
+@import '../../common/stylus/mixin.styl'
+@import '../../common/stylus/variable.styl'
+
+.header
+  position relative
+  height 44px
+  color red
+  text-align center
+
+  .logo
+    display inline-block
+    vertical-align top
+    width 35px
+    height 32px
+    margin 6px 12px 0 0
+    bg-img('./snails')
+    background-size 35px 32px
+    // background-image url('./snails@2x.png')
+
+  .text
+    display inline-block
+    color $color-theme
+    font-size 18px
+
+  .search
+    position absolute
+    top 0
+    right 0
+
+    .iconfont
+      display block
+      padding 10px
+      font-size 22px

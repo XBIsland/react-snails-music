@@ -1,0 +1,173 @@
+@import '../../common/stylus/variable.styl'
+
+.home .am-carousel-wrap-dot-active > span
+  background $color-theme
+
+.home
+  position relative
+
+  .banner
+    width 100%
+    border-radius 8px
+    overflow hidden
+
+  .tag
+    position absolute
+    display block
+    right 0
+    bottom 0
+    padding 4px
+    font-size 10px
+    color $text-white
+    border-top-left-radius 8px
+    border-bottom-right-radius 8px
+
+    &.blue
+      background-color $color-theme
+
+    &.red
+      background-color $color-red
+
+  .tab
+    display flex
+    flex-wrap wrap
+    padding 24px 0
+    border-bottom 1px solid #eee
+
+    .tab-item
+      flex 1
+      min-width 25%
+      text-align center
+      font-size 12px
+
+      .icon
+        position relative
+        display block
+        width 50px
+        height 50px
+        margin 0 auto
+        text-align center
+        border-radius 50%
+        background-color $color-theme
+
+        .iconfont
+          position absolute
+          top 50%
+          left 50%
+          transform translate3d(-50%, -50%, 0)
+          font-size 22px
+          color #ffffff
+
+      .text
+        display block
+        margin-top 10px
+
+  .content
+    position relative
+
+    .pulling-down-wrapper
+      position absolute
+      width 100%
+      box-sizing border-box
+      transform translateY(-100%) translateZ(0)
+      text-align center
+
+      .down
+        font-size 12px
+        line-height 20px
+
+      .loading
+        display none
+
+        &.active
+          display inline-block
+
+      .check
+        display none
+        color $color-theme
+
+        &.active
+          display inline-block
+          animation hideIndex 0.3s
+
+    .content-item
+      overflow hidden
+
+      .content-header
+        position relative
+        width 100%
+        height 40px
+
+        .title
+          float left
+          font-size 17px
+
+        .link-btn
+          position absolute
+          right 0
+          bottom 5px
+          padding 5px 8px
+          border 1px solid #ccc
+          border-radius 14px
+          font-size 10px
+
+      .content-list
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        margin-top 10px
+
+        .song-list
+          width 30%
+          margin-bottom 18px
+
+          .img-wrapper
+            position relative
+            width 104px
+            height 104px
+            border-radius 8px
+            background-color #ccc
+            overflow hidden
+
+            .top
+              position absolute
+              text-align right
+              width 100%
+              padding 0 6px
+              line-height 18px
+              font-size 12px
+              color #fff
+              box-sizing border-box
+              background-image linear-gradient(rgba(0, 0, 0, 0.3), rgba(238, 238, 238, 0))
+
+              .iconfont
+                vertical-align top
+                font-weight 100
+                color #fff
+
+            img
+              border-radius 8px
+
+          .text
+            line-height 1.5em
+            margin-top 10px
+            overflow hidden
+            text-overflow ellipsis
+            display -webkit-box
+            font-size 12px
+            -webkit-line-clamp 2
+            -webkit-box-orient vertical
+
+  .wrapper
+    position fixed
+    top 300px
+    bottom 0
+    width 100%
+    overflow hidden
+
+@keyframes hideIndex
+  0%
+    transform scale(0.1)
+
+  100%
+    transform scale(1)
