@@ -9,6 +9,7 @@ class Banner extends Component {
         <Carousel
           className="aadd"
           infinite
+          cellSpacing={30}
           autoplay={true}
           style={{ touchAction: "none",height: 0, paddingBottom: 134 }}
         >
